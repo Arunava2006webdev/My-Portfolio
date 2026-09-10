@@ -1,4 +1,5 @@
 import hero from "../assets/arunava.png";
+import resume from "../assets/Arunava Mandal Resume1.pdf"
 
 export default function Hero() {
   return (
@@ -21,9 +22,13 @@ export default function Hero() {
             Node.js, Express, and MySQL.
           </p>
 
-          <button className="bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition duration-300">
-            Download Resume
-          </button>
+          <a
+           href={resume}
+            download
+            className="inline-block bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition duration-300"
+          >
+          Download Resume
+          </a>
         </div>
 
         <div className="flex justify-center">

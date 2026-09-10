@@ -1,4 +1,22 @@
+import { useForm } from "@formspree/react";
+
 export default function Contact() {
+  const [state, handleSubmit] = useForm("xaeyvqlr");
+  if (state.succeeded) {
+  return (
+    <section id="contact" className="bg-black text-white py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-cyan-400">
+          Message Sent!
+        </h2>
+
+        <p className="text-gray-400 mt-4">
+          Thank you for contacting me. I'll get back to you soon.
+        </p>
+      </div>
+    </section>
+  );
+}
   return (
     <section id="contact" className="bg-black text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
@@ -62,32 +80,35 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
 
             <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-            />
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+/>
 
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-            />
+<input
+  type="email"
+  name="email"
+  placeholder="Your Email"
+  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+/>
 
-            <textarea
-              rows="5"
-              placeholder="Your Message"
-              className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition"
-            >
-              Send Message
-            </button>
+<textarea
+  name="message"
+  rows="5"
+  placeholder="Your Message"
+  className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 outline-none focus:border-cyan-400"
+></textarea>
+  <button
+  type="submit"
+  disabled={state.submitting}
+  className="bg-cyan-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition disabled:opacity-50"
+>
+  {state.submitting ? "Sending..." : "Send Message"}
+</button>
 
           </form>
 

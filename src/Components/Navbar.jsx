@@ -20,6 +20,14 @@ export default function Navbar() {
               About
             </a>
           </li>
+          <li>
+             <a
+              href="#education"
+              className="hover:text-cyan-400"
+              >
+              Education
+            </a>
+          </li>
 
           <li>
             <a href="#skills" className="hover:text-cyan-400">
@@ -61,6 +69,11 @@ export default function Navbar() {
               className="block hover:text-cyan-400"
             >
               About
+            </a>
+          </li>
+          <li>
+            <a href="#education" onClick={() => setIsOpen(false)}>
+              Education
             </a>
           </li>
 
