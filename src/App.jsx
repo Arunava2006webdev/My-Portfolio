@@ -6,18 +6,23 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import StarBackground from "./Components/StarBackground";
 
 function App() {
   return (
     <div className=" bg-black">
       <Navbar />
-      <Hero/>
-      <About/>
-       <Education />
-      <Skills/>
-      <Projects />
-      <Contact/>
-      <Footer/>
+       <StarBackground>
+        <Hero/>
+        <About/>
+        <Education />
+        <Skills/>
+        <Projects />
+        <Contact/>
+        <Footer/>
+
+       </StarBackground>
+      
     </div>
   );
 }

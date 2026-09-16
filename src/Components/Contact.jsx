@@ -18,7 +18,7 @@ export default function Contact() {
   );
 }
   return (
-    <section id="contact" className="bg-black text-white py-20">
+    <section id="contact" className=" text-white py-20">
       <div className="max-w-6xl mx-auto px-6">
 
         <p className="text-cyan-400 font-semibold mb-2">

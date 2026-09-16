@@ -1,4 +1,99 @@
 @import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Main nebula */
+.nebula {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+}
+
+/* Left blue cloud */
+.nebula-one {
+  width: 700px;
+  height: 500px;
+  top: 5%;
+  left: -200px;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 90, 255, 0.30),
+    rgba(0, 40, 150, 0.15),
+    transparent 70%
+  );
+
+  animation: nebulaOne 18s ease-in-out infinite alternate;
+}
+
+/* Right blue cloud */
+.nebula-two {
+  width: 650px;
+  height: 500px;
+  right: -180px;
+  bottom: 10%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 110, 255, 0.28),
+    rgba(30, 40, 160, 0.12),
+    transparent 70%
+  );
+
+  animation: nebulaTwo 20s ease-in-out infinite alternate;
+}
+
+/* Center subtle cloud */
+.nebula-three {
+  width: 800px;
+  height: 450px;
+  top: 35%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(20, 70, 180, 0.12),
+    transparent 70%
+  );
+
+  animation: nebulaThree 15s ease-in-out infinite alternate;
+}
+
+
+/* Nebula movement */
+
+@keyframes nebulaOne {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(100px, 50px) scale(1.15);
+  }
+}
+
+@keyframes nebulaTwo {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(-100px, -50px) scale(1.15);
+  }
+}
+
+@keyframes nebulaThree {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+
+  to {
+    transform: translateX(-50%) scale(1.2);
+  }
 }

@@ -3,7 +3,7 @@ import resume from "../assets/Arunava Mandal Resume1.pdf"
 
 export default function Hero() {
   return (
-    <section className="bg-black text-white min-h-[90vh] flex items-center">
+    <section className=" text-white min-h-[90vh] flex items-center">
       <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
 
         <div className="text-center md:text-left">
@@ -18,8 +18,9 @@ export default function Hero() {
           </h2>
 
           <p className="text-gray-400 leading-7 mb-8 max-w-xl mx-auto md:mx-0">
-            I build responsive web applications using React,
-            Node.js, Express, and MySQL.
+            Computer Science and Engineering student focused on
+            building scalable, responsive, and user-friendly web
+            applications using modern full stack technologies.
           </p>
 
           <a
